@@ -5,7 +5,7 @@ const Story = () => {
       <div className="relative h-[60vh] mb-16">
         <div className="absolute inset-0 bg-black/30 z-10" />
         <img
-          src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&q=80"
+          src="/couple.jpg"
           alt="Bride and Groom"
           className="w-full h-full object-cover"
         />

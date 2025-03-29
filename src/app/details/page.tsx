@@ -39,7 +39,7 @@ const Details = () => {
   );
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-pink-50 to-white pt-20 pb-16">
+    <div className="min-h-screen bg-gradient-to-b from-pink-50 to-white pt-20 pb-16 flex flex-col items-center justify-center">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h1 className="text-3xl font-serif text-gray-900 mb-4">Event Details</h1>
