@@ -1,17 +1,31 @@
 const Story = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-pink-50 to-white pt-20 pb-16">
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h1 className="text-3xl font-serif text-gray-900 mb-4">Our Story</h1>
-          <p className="text-xl text-gray-600">A journey of love and togetherness</p>
+      {/* Couple Photo Section */}
+      <div className="relative h-[60vh] mb-16">
+        <div className="absolute inset-0 bg-black/30 z-10" />
+        <img
+          src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&q=80"
+          alt="Bride and Groom"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 flex flex-col items-center justify-center z-20">
+          <h1 className="text-4xl sm:text-6xl font-serif text-white mb-4">
+            Our Love Story
+          </h1>
+          <p className="text-xl sm:text-2xl text-white/90">
+            A journey of love and togetherness
+          </p>
         </div>
+      </div>
 
+      {/* Story Content */}
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="space-y-8">
           <div className="bg-white p-8 rounded-lg shadow-lg">
             <h2 className="text-2xl font-serif text-gray-900 mb-4">The Beginning</h2>
             <p className="text-gray-600 leading-relaxed">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
           </div>
 

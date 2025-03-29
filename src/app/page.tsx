@@ -9,7 +9,7 @@ export default function Home() {
             <h1 className="text-4xl sm:text-6xl font-serif text-gray-900 mb-8 flex flex-col items-center">
               Pandiyaraj 
               <span className="text-gray-600">&</span>
-              Kotishwari
+              Kotteeshwari
             </h1>
             <div className="space-y-4">
               <p className="text-2xl sm:text-3xl text-gray-700">
