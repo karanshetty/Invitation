@@ -9,8 +9,9 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        'serif': ['var(--font-playfair)'],
+        'serif': ['var(--font-cormorant)'],
         'sans': ['var(--font-montserrat)'],
+        'great-vibes': ['var(--font-great-vibes)'],
       },
       colors: {
         'pink': {

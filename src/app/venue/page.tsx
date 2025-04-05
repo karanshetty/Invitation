@@ -43,11 +43,9 @@ const Venue = () => {
             transition={{ duration: 0.8 }}
             className="flex items-center justify-center gap-2 mb-12"
           >
-            <RiHeartsLine className="text-pink-600 text-3xl md:text-4xl" />
-            <h1 className="text-3xl md:text-4xl text-gray-900 font-medium flex items-center">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-pink-600 font-great-vibes tracking-wide">
               Venue
             </h1>
-            <RiHeartsLine className="text-pink-600 text-3xl md:text-4xl" />
           </motion.div>
 
           <div className="text-center mb-12">
@@ -56,7 +54,7 @@ const Venue = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h2 className="text-2xl md:text-3xl text-gray-900 mb-4 font-medium">Location</h2>
+              <h2 className="text-2xl md:text-3xl text-gray-900 mb-4 font-great-vibes">Location</h2>
               <LoadScript googleMapsApiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY!}>
                 <GoogleMap
                   mapContainerStyle={mapContainerStyle}
@@ -69,7 +67,7 @@ const Venue = () => {
             </div>
 
             <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h2 className="text-2xl md:text-3xl text-gray-900 mb-4 font-medium">Scan for Directions</h2>
+              <h2 className="text-2xl md:text-3xl text-gray-900 mb-4 font-great-vibes">Scan for Directions</h2>
               <div className="flex justify-center">
                 <QRCodeSVG
                   value={`https://www.google.com/maps/search/?api=1&query=${venueLocation.lat},${venueLocation.lng}`}
@@ -78,17 +76,17 @@ const Venue = () => {
                   includeMargin={true}
                 />
               </div>
-              <p className="text-center text-gray-600 mt-4">
+              <p className="text-center text-gray-600 mt-4 font-light">
                 Scan this QR code to get directions to the venue.
               </p>
-              <p className="text-center text-gray-600 mt-4">
+              <p className="text-center text-gray-600 mt-4 font-light">
                 or
               </p>
               <a 
                 href={`https://www.google.com/maps/search/?api=1&query=${venueLocation.lat},${venueLocation.lng}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block text-center text-blue-600 hover:text-blue-800 mt-2"
+                className="block text-center text-blue-600 hover:text-blue-800 mt-2 font-light"
               >
                 Open in Google Maps
               </a>

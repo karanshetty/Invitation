@@ -45,11 +45,9 @@ const Details = () => {
             transition={{ duration: 0.8 }}
             className="flex items-center justify-center gap-2 mb-12"
           >
-            <RiHeartsLine className="text-pink-600 text-3xl md:text-4xl" />
-            <h1 className="text-3xl md:text-4xl text-center text-gray-900 font-medium flex items-center">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-pink-600 font-great-vibes tracking-wide">
               Wedding Events
             </h1>
-            <RiHeartsLine className="text-pink-600 text-3xl md:text-4xl" />
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">

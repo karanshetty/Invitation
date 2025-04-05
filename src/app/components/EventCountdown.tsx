@@ -46,7 +46,7 @@ const EventCountdown = ({ title, date, time, description, targetDate }: Countdow
 
   return (
     <div className="bg-white p-6 rounded-lg shadow-lg">
-      <h2 className="text-2xl md:text-3xl text-pink-600 font-medium mb-4">
+      <h2 className="text-2xl md:text-3xl text-pink-600 font-great-vibes mb-4">
         {title}
       </h2>
       <div className="space-y-4 mb-6">
