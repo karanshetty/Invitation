@@ -4,8 +4,22 @@ import { motion } from 'framer-motion';
 import { BsHeartFill, BsCalendar2HeartFill } from 'react-icons/bs';
 import { FaMapMarkerAlt, FaRegClock } from 'react-icons/fa';
 import { RiHeartsLine } from 'react-icons/ri';
+import { useState, useEffect } from 'react';
 
 const Home = () => {
+  const [heartPositions, setHeartPositions] = useState<Array<{ x: number; y: number; size: number }>>([]);
+
+  useEffect(() => {
+    // Initialize heart positions only on client side
+    setHeartPositions(
+      Array(6).fill(null).map(() => ({
+        x: Math.random() * (typeof window !== 'undefined' ? window.innerWidth : 1000),
+        y: Math.random() * (typeof window !== 'undefined' ? window.innerHeight : 1000),
+        size: Math.random() * 20 + 10
+      }))
+    );
+  }, []);
+
   return (
     <div className="min-h-screen relative bg-gradient-to-b from-rose-50 via-white to-rose-50">
       {/* Decorative Background Elements */}
@@ -26,13 +40,13 @@ const Home = () => {
 
         {/* Floating hearts */}
         <div className="absolute inset-0">
-          {[...Array(6)].map((_, i) => (
+          {heartPositions.map((position, i) => (
             <motion.div
               key={i}
               className="absolute"
               initial={{
-                x: Math.random() * window.innerWidth,
-                y: Math.random() * window.innerHeight,
+                x: position.x,
+                y: position.y,
                 scale: 0.5,
                 opacity: 0.3
               }}
@@ -48,7 +62,7 @@ const Home = () => {
                 delay: Math.random() * 5
               }}
             >
-              <BsHeartFill className="text-pink-200" size={Math.random() * 20 + 10} />
+              <BsHeartFill className="text-pink-200" size={position.size} />
             </motion.div>
           ))}
         </div>
